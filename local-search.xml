@@ -4,13 +4,25 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2024/01/20/hello-world/"/>
-    <url>/2024/01/20/hello-world/</url>
+    <title>GitHub搭建自己的博客过程记录</title>
+    <link href="/2024/01/20/GitHub%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
+    <url>/2024/01/20/GitHub%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>本文只是针对在Mac OS系统上部署自己的博客时遇到的一些问题作出的整理（Mac OS系统）</p><h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>在官网下载适合Mac版本的<code>node.js</code>：  <a href="http://nodejs.org/">http://nodejs.org/</a><br>安装成功后可以使用<code>node -v</code>检查是否安装成功。</p><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>安装hexo命令：<br><code>npm install -g hexo-cli</code></p><p>安装指令过程可能会涉及到权限问题需要将对应文件夹授权</p><h3 id="搭建本地代码"><a href="#搭建本地代码" class="headerlink" title="搭建本地代码"></a>搭建本地代码</h3><p>1、新建blog文件夹</p><p><code>mkdir blog</code></p><p>2、当前目录使用Hexo生成并初始化博客。</p><p><code>hexo init</code></p><p>3、启动Hexo<br><code>hexo server</code><br>启动成功后访问 <a href="http://localhost:4000/">http://localhost:4000</a> 即可看到效果。</p><h3 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h3><p>官网非常非常多的主题可以选择可以选择自己喜欢的，我这边悬着的是<code>Fluid</code>，官方地址 <a href="https://hexo.fluid-dev.com/">https://hexo.fluid-dev.com/</a><br>下载之后解压将文件夹放在blog文件夹下<br><img src="/img.png" alt="img.png"></p><p>然后修改对应的 <em>_config.yml</em> 文件即可，然后重新编译启动即可</p><h3 id="GithubPages"><a href="#GithubPages" class="headerlink" title="GithubPages"></a>GithubPages</h3><p>我们可以通过本地<code>hexo d</code>命令，将代码直接推送到GitHub上去实现自己的博客</p><p>在 <em>_config.yml</em> （初始化项目的时候的） 里有个deploy属性</p><p><code>deploy: type: &#39;git&#39;    repo: 仓库名   branch: 分支   </code><br>然后执行<code>hexo g &amp;&amp; hexo d</code>  输入自己的账户和ssh key即可</p>]]></content>
     
     
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>程序搭建</tag>
+      
+    </tags>
     
   </entry>
   
